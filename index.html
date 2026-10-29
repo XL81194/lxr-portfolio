@@ -1,435 +1,136 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>李小冉 | 数据分析作品集</title>
-    <meta name="description" content="李小冉的个人作品集，聚焦数据分析、业务理解、AI 辅助工作流与项目落地。">
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
-    <div class="progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-
-    <header class="site-header" id="top">
-      <a class="brand" href="#profile" aria-label="回到首页">
-        <span class="brand-mark">LX</span>
-        <span>李小冉</span>
-      </a>
-      <nav class="nav-links" aria-label="页面导航">
-        <a href="#role-fit">分析能力</a>
-        <a href="#projects">项目</a>
-        <a href="#experience">经历</a>
-        <a href="#education">教育</a>
-        <a href="#skills">能力</a>
-        <a href="#contact">联系</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F7F5">
+  <title>李小冉 | AI Product &amp; Agent Application</title>
+  <meta name="description" content="AI Product / Agent Application portfolio of Xiaoran Li, focused on turning business problems into working AI prototypes.">
+  <link rel="canonical" href="https://xl81194.github.io/lxr-portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="李小冉 | AI Product &amp; Agent Application">
+  <meta property="og:description" content="从真实业务问题出发，用 AI、数据与快速原型，把想法推进到可运行的产品。">
+  <meta property="og:url" content="https://xl81194.github.io/lxr-portfolio/">
+  <meta property="og:image" content="https://xl81194.github.io/lxr-portfolio/assets/images/og-portfolio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./assets/icons.js"></script>
+  <script defer src="./projects.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至内容</a>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#profile" aria-label="李小冉，回到首页">LX<span class="brand-dot"></span></a>
+      <nav id="navigation" class="navigation" aria-label="主导航">
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#resume" data-resume>Resume <i data-icon="arrow-up-right"></i></a>
       </nav>
-    </header>
+      <a class="header-contact" href="#contact">Contact <i data-icon="arrow-up-right"></i></a>
+      <button class="icon-button menu-button" type="button" aria-label="打开导航" aria-controls="navigation" aria-expanded="false" title="导航菜单"><i data-icon="menu"></i></button>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero section" id="profile">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">PORTFOLIO 2026 · DATA ANALYTICS</p>
-            <h1>把复杂业务问题拆成清晰的数据分析路径，并用 AI 提升从分析到落地的效率。</h1>
-            <p class="hero-lede">
-              北京交通大学信息管理与信息系统 2027 届。关注数据分析、业务理解与项目落地，能够完成数据清洗、指标构建、模型验证、可视化表达与分析汇报，并积极使用 AI 工具辅助代码、原型、资料整理和结果校验。
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#projects">查看项目经历</a>
-              <a class="button ghost" href="mailto:lxr77502@outlook.com">联系我</a>
-            </div>
-            <div class="contact-strip" aria-label="公开联系方式">
-              <span>邮箱 lxr77502@outlook.com</span>
-              <span>IELTS 7.0</span>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal" data-parallax="0.12">
-            <div class="portrait-stage">
-              <div class="portrait-card">
-                <img src="./assets/images/avatar.jpg" alt="李小冉头像">
-                <div class="portrait-caption">
-                  <strong>李小冉</strong>
-                  <span>Data Analytics Portfolio</span>
-                </div>
-              </div>
-              <div class="signal-card signal-a glass">
-                <span>FOCUS</span>
-                <strong>数据分析 / 商业分析</strong>
-              </div>
-              <div class="signal-card signal-b glass">
-                <span>METHOD</span>
-                <strong>AI 提效 + 人工验证</strong>
-              </div>
-              <div class="signal-card signal-c glass">
-                <span>DATA</span>
-                <strong>清洗 · 建模 · 可视化</strong>
-              </div>
-            </div>
-          </div>
+  <main id="main">
+    <section id="profile" class="hero container" aria-labelledby="hero-name">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> BUSINESS × AI × BUILD</p>
+        <h1 id="hero-name">李小冉<span>Xiaoran Li</span></h1>
+        <p class="hero-direction">AI Product · Agent Application</p>
+        <p class="hero-statement">从真实业务问题出发，<br class="desktop-break">用 AI、数据与快速原型，<br class="desktop-break">把想法推进到可运行的产品。</p>
+        <p class="hero-english" lang="en">Turning real business problems into<br>testable AI products and prototypes.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View Projects <i data-icon="arrow-down"></i></a>
+          <a class="button button-quiet" href="#resume" data-resume>Resume <i data-icon="arrow-up-right"></i></a>
         </div>
+        <p class="hero-caption">北京交通大学 · 信息管理与信息系统 · 2027 届</p>
+      </div>
+      <div class="product-collage" aria-label="Elder Care 和 GRE List Lab 真实项目界面">
+        <a class="collage-window collage-dashboard" href="#case/elder-care" aria-label="查看 Elder Care 案例">
+          <span class="window-bar"><span class="window-dots" aria-hidden="true"></span><span>Elder Care / Dashboard</span><i data-icon="arrow-up-right"></i></span>
+          <img src="./assets/images/elder-dashboard.webp" width="1500" height="508" alt="Elder Care 管理员 Dashboard，展示捐赠记录和汇总数据" fetchpriority="high">
+        </a>
+        <a class="collage-window collage-gre" href="#case/gre-list-lab" aria-label="查看 GRE List Lab 案例">
+          <span class="window-bar"><span class="window-dots" aria-hidden="true"></span><span>GRE List Lab / Learning workspace</span><i data-icon="arrow-up-right"></i></span>
+          <img src="./assets/images/gre-list-lab.webp" width="1200" height="767" alt="GRE List Lab 学习计划、到期复习和日历首页">
+        </a>
+        <a class="collage-window collage-assistant" href="#case/elder-care" aria-label="查看自然语言查询助手案例">
+          <span class="window-bar"><span class="window-dots" aria-hidden="true"></span><span>AI Database Assistant</span><i data-icon="arrow-up-right"></i></span>
+          <img src="./assets/images/elder-assistant.webp" width="1500" height="511" alt="真实 AI 数据库助手对话：查询有孩子的捐赠人数">
+        </a>
+        <p class="collage-note"><span class="status-dot"></span> REAL INTERFACES. WORKING PROTOTYPES.</p>
+      </div>
+    </section>
 
-        <div class="hero-metrics reveal" aria-label="核心信息">
-          <div>
-            <span>2027 届</span>
-            <strong>北京交通大学</strong>
-          </div>
-          <div>
-            <span>GPA</span>
-            <strong>3.68/4.0</strong>
-          </div>
-          <div>
-            <span>平均成绩</span>
-            <strong>89</strong>
-          </div>
-          <div>
-            <span>当前方向</span>
-            <strong>数据分析 / AI 辅助分析 / 业务洞察</strong>
-          </div>
-        </div>
-      </section>
+    <section id="projects" class="work-section section container" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">从问题出发，让方案可运行。</h2></div>
+        <p class="section-aside">四个项目，连接业务理解、<br>AI 应用与原型实践。</p>
+      </div>
+      <div id="project-grid" class="project-grid"></div>
+      <noscript><p>请开启 JavaScript 查看项目案例。你也可以直接访问 <a href="https://eldercaremanagement.onrender.com/">Elder Care</a> 和 <a href="https://xl81194.github.io/gre-list-lab/index.html">GRE List Lab</a>。</p></noscript>
+    </section>
 
-      <section class="section role-section" id="role-fit">
-        <div class="section-head reveal">
-          <p class="eyebrow">ANALYTICS FIT</p>
-          <h2>分析能力匹配：从业务问题到可验证结论。</h2>
-          <p>我的优势不是把自己包装成单一岗位专家，而是能在数据分析、业务理解和 AI 辅助工作流之间建立连接，把复杂问题推进到清晰产出。</p>
-        </div>
-
-        <div class="fit-grid">
-          <article class="fit-card glass reveal">
-            <span class="fit-index">01</span>
-            <h3>业务问题拆解</h3>
-            <p>在通信收入预测项目中，将收入变化拆成流量单价、出账用户数、零流量用户数、户均流量等指标，转化为可分析、可验证的数据任务。</p>
+    <section id="experience" class="section section-band" aria-labelledby="experience-title">
+      <div class="container section-columns">
+        <div class="section-intro"><p class="eyebrow">02 / EXPERIENCE</p><h2 id="experience-title">在真实场景里，<br>建立判断。</h2><p>业务分析与研究经历，<br>构成理解问题、验证方案的基础。</p></div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-heading"><div><h3>北京东方国信</h3><p>商业分析实习生</p></div><span class="date">2026.06 — 2026.08</span></div>
+            <ul class="experience-points"><li>将经营问题拆成核心指标、数据任务和验证步骤。</li><li>结合滚动验证与留出集测试，检查预测偏差和指标贡献。</li><li>用生成式 AI 迭代 Python 代码、整理材料，由本人复核业务逻辑与结论。</li></ul>
+            <a class="text-link" href="#case/telecom-revenue">相关项目 <i data-icon="arrow-up-right"></i></a>
           </article>
-          <article class="fit-card glass reveal">
-            <span class="fit-index">02</span>
-            <h3>数据处理与建模验证</h3>
-            <p>覆盖经营数据清洗、口径检查、时间序列建模、多源资料结构化和交叉核验，能把原始信息整理成可复盘的分析证据。</p>
-          </article>
-          <article class="fit-card glass reveal">
-            <span class="fit-index">03</span>
-            <h3>AI 辅助工作流</h3>
-            <p>长期使用生成式 AI 辅助代码调试、网页原型、数据库设计、资料整理和结果校验，并保留人工判断与口径复核。</p>
+          <article class="experience-item">
+            <div class="experience-heading"><div><h3>清华大学 · Research Experience</h3><p>研究助理</p></div></div>
+            <div class="research-appointments"><p><span>经济管理学院</span><span class="date">2025.04 — 2026.03</span></p><p><span>技术创新研究中心</span><span class="date">2024.10 — 2025.01</span></p></div>
+            <p class="experience-description">参与企业创新生态与国际化相关研究，整理公开资料、行业信息和学术文献，建立结构化分类，并交叉核验来源与口径。</p>
+            <span class="experience-footnote">Business research · Information structuring · Cross-source validation</span>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="role-matrix reveal">
-          <div class="matrix-row matrix-head">
-            <span>分析能力</span>
-            <span>我的对应证据</span>
-          </div>
-          <div class="matrix-row">
-            <span>Business & Analytics</span>
-            <span>具备业务问题拆解、指标口径梳理、经营分析和分析汇报经验，能从目标倒推数据路径。</span>
-          </div>
-          <div class="matrix-row">
-            <span>Data & Modeling</span>
-            <span>熟悉 Python、SQL、Excel，接触时间序列、AHP、LightGBM、贝叶斯网络等方法，重视口径检查和模型验证。</span>
-          </div>
-          <div class="matrix-row">
-            <span>Visualization & Communication</span>
-            <span>能将分析过程转化为图表、汇报材料、研究总结和英文展示，让结论更容易被理解和复用。</span>
-          </div>
-          <div class="matrix-row">
-            <span>AI-assisted Workflow</span>
-            <span>长期使用 AI 产品和 AI 工具，并能把它们融入数据处理、代码调试、原型开发、资料整理和人工校验流程。</span>
+    <section id="about" class="section container" aria-labelledby="about-title">
+      <div class="about-intro"><div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">理解业务。<br>持续实践 AI。<br><span>把想法做出来。</span></h2></div><div class="about-copy"><p>我正在从业务与数据分析，走向 AI 产品和 Agent 应用。信息系统背景让我习惯先梳理场景、角色和流程，再选择合适的工具。</p><p>我用 AI 辅助需求分析、代码开发和原型迭代，也亲自承担业务逻辑对齐、功能测试与结果验证。希望参与有明确问题、能够被验证的 AI 应用。</p></div></div>
+      <div class="capabilities">
+        <article class="capability"><span class="capability-number">01</span><i data-icon="scan-line"></i><h3>Product &amp;<br>Problem Framing</h3><p>从业务目标梳理需求、角色和流程，把模糊问题拆成具体功能与可执行任务。</p><span class="capability-notes">需求分析 · 流程设计 · 产品原型</span></article>
+        <article class="capability"><span class="capability-number">02</span><i data-icon="sparkles"></i><h3>AI Application</h3><p>持续学习和实践 LLM、Prompt、RAG、Agent 与 Tool Calling；在课程原型中完成 DeepSeek API 接入。</p><span class="capability-notes">持续学习与实践 · API Integration</span></article>
+        <article class="capability"><span class="capability-number">03</span><i data-icon="blocks"></i><h3>Build &amp; Prototype</h3><p>借助 AI Coding 推进前后端、数据库与网页原型开发，通过调试和测试打通功能。</p><span class="capability-notes">Flask · HTML / JavaScript · Database</span></article>
+        <article class="capability"><span class="capability-number">04</span><i data-icon="chart-no-axes-combined"></i><h3>Data &amp; Business</h3><p>用 Python、SQL 和 Excel 完成指标拆解、数据处理、模型验证与经营分析，支持方案判断。</p><span class="capability-notes">Business Analysis · Model Validation</span></article>
+      </div>
+    </section>
+
+    <section id="education" class="section section-band" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">04 / EDUCATION &amp; RESEARCH</p><h2 id="education-title">交叉背景，开放视野。</h2></div></div>
+        <div class="education-layout">
+          <article class="education-summary"><p class="eyebrow">BEIJING JIAOTONG UNIVERSITY</p><h3>北京交通大学</h3><p class="degree">信息管理与信息系统</p><p class="date">2023.09 — 2027.06</p><dl class="education-stats"><div><dt>GPA</dt><dd>3.68<span> / 4.0</span></dd></div><div><dt>Average</dt><dd>89</dd></div><div><dt>IELTS</dt><dd>7.0</dd></div></dl><p class="course-list">数据库应用基础 · 商务应用开发 · 计算机仿真技术</p></article>
+          <div class="research-summary">
+            <article class="research-feature"><div><span class="eyebrow">SOI 2025 · FIRST AUTHOR</span><h3>海尔数字化创新生态案例研究</h3><p>从公开资料、访谈与编码分析中梳理创新生态演化，并在国际会议完成英文口头汇报。</p><a class="text-link" href="#case/haier-research">查看研究 <i data-icon="arrow-up-right"></i></a></div><button class="research-image" data-image="./assets/images/soi-presentation.webp" data-caption="SOI 2025 国际会议英文汇报现场" type="button" aria-label="放大 SOI 2025 汇报照片" title="放大汇报照片"><img src="./assets/images/soi-presentation.webp" width="1000" height="503" alt="SOI 2025 国际会议英文汇报现场" loading="lazy"><span class="image-expand"><i data-icon="expand"></i></span></button></article>
+            <div class="award-list"><p><span>2026</span><span>美国大学生数学建模竞赛 · Honorable Mention</span></p><p><span>2026</span><span>北京交通大学「挑战杯」· 校级铜奖</span></p><p><span>2023</span><span>全国大学生数学竞赛 · 省级二等奖</span></p></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section experience-section" id="experience">
-        <div class="section-head reveal">
-          <p class="eyebrow">EXPERIENCE</p>
-          <h2>实习与研究经历</h2>
-          <p>经历横跨商业分析、创新生态研究、资料结构化与档案数字化，核心共同点是把复杂信息变成可验证的数据资产。</p>
-        </div>
+    <section id="contact" class="contact-section container" aria-labelledby="contact-title">
+      <div><p class="eyebrow">05 / CONTACT</p><h2 id="contact-title" lang="en">Let’s build<br><span>useful AI products.</span></h2><p>Interested in AI Product, Agent Applications<br>and AI-native workflows.</p></div>
+      <div class="contact-links"><a href="mailto:lxr77502@outlook.com"><span><small>EMAIL</small>lxr77502@outlook.com</span><i data-icon="arrow-up-right"></i></a><a href="#resume" data-resume><span><small>AI PRODUCT / AGENT APPLICATION</small>Resume / 索取简历</span><i data-icon="arrow-up-right"></i></a><a href="https://xl81194.github.io/lxr-portfolio/"><span><small>PORTFOLIO</small>xl81194.github.io/lxr-portfolio</span><i data-icon="arrow-up-right"></i></a></div>
+    </section>
+  </main>
+  <footer class="footer container"><span>© 2026 李小冉 · Xiaoran Li</span><span>Business × AI × Build</span><a href="#profile">Back to top <i data-icon="arrow-up"></i></a></footer>
 
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="time">2026.06 - 至今</div>
-            <div class="timeline-card">
-              <p class="company">东方国信</p>
-              <h3>商业分析实习生</h3>
-              <ul>
-                <li>参与通信运营商流量收入预测与经营分析，基于 36 个月经营数据完成清洗、口径检查、时间序列诊断、模型训练与结果评价。</li>
-                <li>围绕业务目标拆解四项指标，持续梳理分析需求并转化为可执行的数据处理与验证任务。</li>
-                <li>使用生成式 AI 辅助 Python 调试、结果核验和材料整理，输出模型评价、收入驱动拆解、可视化图表及汇报材料。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="time">2025.04 - 2026.03</div>
-            <div class="timeline-card">
-              <p class="company">清华大学经济管理学院</p>
-              <h3>初级研究助理</h3>
-              <ul>
-                <li>参与国家自然科学基金面上项目和中国企业国际化战略相关助研工作。</li>
-                <li>提取企业公开信息、行业资料与学术文献中的数据和文本，进行分类、结构化整理与多来源交叉核验。</li>
-                <li>识别信息缺失和口径不一致问题，支持后续研究分析框架搭建。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="time">2024.10 - 2025.01</div>
-            <div class="timeline-card">
-              <p class="company">清华大学技术创新研究中心</p>
-              <h3>研究助手</h3>
-              <ul>
-                <li>参与“领军科技企业主导的双链融合模式与路径探究”，整理政策、行业与企业层面的二手资料。</li>
-                <li>使用主题分类法对文献和资料进行编码与分析。</li>
-                <li>针对陌生的轨道交通技术领域，系统梳理行业报告和学术文献，形成结构化技术分类框架。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="time">2025.07 - 2025.08</div>
-            <div class="timeline-card">
-              <p class="company">北京市朝阳区档案馆</p>
-              <h3>实习</h3>
-              <ul>
-                <li>协助完成馆藏纸质档案数字化扫描与图像处理，依照档案著录规范校验元数据信息。</li>
-                <li>参与历史数据补录、分类标引与档案管理系统基础数据维护，积累图像数据处理和元数据质量核验经验。</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section education-section" id="education">
-        <div class="education-grid">
-          <div class="section-head reveal">
-            <p class="eyebrow">EDUCATION</p>
-            <h2>学历背景</h2>
-            <p>信息管理与信息系统的交叉训练，让我既能理解业务流程，也能进入数据库、统计建模和系统原型开发。</p>
-          </div>
-          <div class="edu-card reveal">
-            <div>
-              <p class="school">北京交通大学</p>
-              <h3>信息管理与信息系统 · 2027 届</h3>
-            </div>
-            <div class="edu-stats">
-              <span>GPA 3.68/4.0</span>
-              <span>平均成绩 89</span>
-              <span>IELTS 7.0</span>
-            </div>
-            <div class="course-grid">
-              <span>数据库应用基础 99</span>
-              <span>商务应用开发 97</span>
-              <span>计算机仿真技术 96</span>
-              <span>程序设计</span>
-              <span>数据结构</span>
-              <span>应用统计</span>
-              <span>信息系统与技术</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section skills-section" id="skills">
-        <div class="section-head reveal">
-          <p class="eyebrow">CAPABILITY SYSTEM</p>
-          <h2>个人能力</h2>
-          <p>能力底盘围绕数据分析展开，同时把 AI 工具作为提升效率和扩展产出的工作方法。</p>
-        </div>
-
-        <div class="skill-grid">
-          <article class="skill-card reveal">
-            <span>BUSINESS</span>
-            <h3>Business & Analytics</h3>
-            <p>具备业务问题拆解、指标口径梳理、经营分析和汇报表达经验，能将模糊问题转化为清晰的数据分析路径。</p>
-          </article>
-          <article class="skill-card reveal">
-            <span>DATA</span>
-            <h3>Data & Modeling</h3>
-            <p>熟悉 Python、SQL、Excel，具备 R 语言建模经验；能够完成数据清洗、指标构建、时间序列分析、AHP、LightGBM 和贝叶斯网络建模。</p>
-          </article>
-          <article class="skill-card reveal">
-            <span>COMM</span>
-            <h3>Visualization & Communication</h3>
-            <p>能够把分析过程转化为图表、汇报材料、研究总结和英文展示，重视结论的可解释性、可复盘性和可沟通性。</p>
-          </article>
-          <article class="skill-card reveal">
-            <span>AI</span>
-            <h3>AI-assisted Workflow</h3>
-            <p>使用 Cursor、Claude Code 和生成式 AI 辅助代码调试、网页原型、数据库设计、资料整理和结果校验，并保留人工判断。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section projects-section" id="projects">
-        <div class="section-head reveal">
-          <p class="eyebrow">SELECTED PROJECTS</p>
-          <h2>项目经历</h2>
-          <p>优先呈现能证明数据分析、指标拆解、建模验证、系统落地和 AI 辅助效率的真实项目。</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card featured reveal">
-            <div class="project-visual image-visual revenue-visual" aria-hidden="true">
-              <img src="./assets/images/revenue-model-comparison.png" alt="">
-              <div class="visual-caption">
-                <strong>模型验证</strong>
-                <span>滚动验证 · WAPE 对比 · 收入预测</span>
-              </div>
-            </div>
-            <div class="project-copy">
-              <p class="project-meta">商业分析 · 2026</p>
-              <h3>通信运营商流量收入预测与经营分析</h3>
-              <p>基于 36 个月经营数据完成清洗、口径检查、时间序列诊断、模型训练与结果评价；输出模型评价、收入驱动拆解、可视化图表及汇报材料。</p>
-              <div class="tag-row">
-                <span>Python</span><span>时间序列</span><span>指标拆解</span><span>业务汇报</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card dachuang-card reveal">
-            <div class="project-visual dachuang-visual" aria-hidden="true">
-              <div class="dc-panel dc-flow">
-                <span>多源数据</span>
-                <i></i>
-                <span>预处理</span>
-                <i></i>
-                <span>分维度建模</span>
-                <i></i>
-                <span>状态评估</span>
-              </div>
-              <div class="dc-panel dc-metric">
-                <strong>四维指标</strong>
-                <span>学业</span><span>消费</span><span>身体健康</span><span>心理健康</span>
-              </div>
-              <div class="dc-panel dc-result">
-                <strong>R² 0.968</strong>
-                <span>耐力水平 60.8%</span>
-                <span>运动时长 13.1%</span>
-                <span>身高发育 12.7%</span>
-              </div>
-            </div>
-            <div class="project-copy">
-              <p class="project-meta">项目负责人 · 2025.06 - 2026.06</p>
-              <h3>大学生状态综合评估与发展预测模型</h3>
-              <p>围绕多源数据、指标体系和分维度建模开展分析：学业与消费采用 AHP，身体健康采用 LightGBM，心理健康采用贝叶斯网络；身体健康模型 R²=0.968。</p>
-              <div class="tag-row">
-                <span>指标体系</span><span>AHP</span><span>LightGBM</span><span>模型解释</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card elder-card reveal">
-            <div class="project-visual image-visual site-visual elder-gallery" aria-hidden="true">
-              <figure class="elder-shot elder-shot-dashboard">
-                <img src="./assets/images/elder-care-dashboard-real.png" alt="">
-                <figcaption>Dashboard Overview</figcaption>
-              </figure>
-              <figure class="elder-shot elder-shot-assistant">
-                <div class="assistant-demo">
-                  <div class="assistant-demo-top">
-                    <span>AI Database Assistant</span>
-                    <strong>Natural language query</strong>
-                  </div>
-                  <div class="assistant-chat">
-                    <p class="bot">Ask questions about donors, suppliers, payments, and sustainability.</p>
-                    <p class="user">How many donors have children?</p>
-                    <p class="bot">Based on the database, there are 5 matching donor records.</p>
-                    <p class="user small">List them.</p>
-                  </div>
-                </div>
-                <figcaption>AI Database Assistant</figcaption>
-              </figure>
-              <figure class="elder-shot elder-shot-role">
-                <img src="./assets/images/elder-care-roles.png" alt="">
-                <figcaption>Role-based Access</figcaption>
-              </figure>
-              <div class="visual-caption">
-                <strong>Live System</strong>
-                <span>Login · Role · Data · Dashboard</span>
-              </div>
-            </div>
-            <div class="project-copy">
-              <p class="project-meta">课程项目 · 2026.03 - 2026.05</p>
-              <h3>Elder Care 捐赠与采购管理信息系统</h3>
-              <p>基于虚拟养老机构场景拆解捐赠、采购、库存和财务流程，使用 AI 辅助完成数据库设计、Flask 后端、HTML 前端、TiDB 云数据库连接与功能测试。</p>
-              <p class="project-note">支持 Administrator / Finance / Event Coordinator / General Staff 多角色权限；公开页面不展示演示账号密码。</p>
-              <div class="tag-row">
-                <span>Flask</span><span>TiDB</span><span>Dashboard</span><span>AI Assistant</span>
-              </div>
-              <a class="project-link" href="https://eldercaremanagement.onrender.com/" target="_blank" rel="noreferrer">访问网站</a>
-            </div>
-          </article>
-
-          <article class="project-card vibe-card reveal">
-            <div class="project-visual image-visual site-visual" aria-hidden="true">
-              <img src="./assets/images/gre-list-lab-site.png" alt="">
-              <div class="visual-caption">
-                <strong>GRE List Lab</strong>
-                <span>计划 · 复习 · 拼写检测</span>
-              </div>
-            </div>
-            <div class="project-copy">
-              <p class="project-meta">AI 辅助网页实践 · 2026</p>
-              <h3>GRE List Lab / Vibe Coding 小网站</h3>
-              <p>围绕 GRE 词表学习搭建可运行网页，沉淀 AI 辅助开发和快速原型流程，覆盖计划生成、到期复习、拼写检测、日历视图与前端状态调试。</p>
-              <div class="tag-row">
-                <span>AI Coding</span><span>Prototype</span><span>JavaScript</span><span>前端调试</span>
-              </div>
-              <a class="project-link" href="https://xl81194.github.io/gre-list-lab/index.html" target="_blank" rel="noreferrer">访问网站</a>
-            </div>
-          </article>
-
-          <article class="project-card haier-card reveal">
-            <div class="project-visual haier-gallery" aria-hidden="true">
-              <figure class="haier-shot haier-shot-live">
-                <img src="./assets/images/soi-presentation-focus.jpg" alt="">
-                <figcaption>SOI 2025 Presentation</figcaption>
-              </figure>
-              <div class="visual-caption">
-                <strong>SOI 2025</strong>
-                <span>英文口头汇报 · 案例研究</span>
-              </div>
-            </div>
-            <div class="project-copy">
-              <p class="project-meta">第一作者 · 2025.02 - 2025.07</p>
-              <h3>海尔数字化创新生态案例研究</h3>
-              <p>系统收集 4 万余字二手资料，整理 1 万余字访谈资料及约 2 小时录音，采用关键词聚类与编码分析提炼关键演化节点。</p>
-              <div class="tag-row">
-                <span>案例研究</span><span>编码分析</span><span>资料结构化</span><span>英文汇报</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section awards-section" id="awards">
-        <div class="section-head reveal">
-          <p class="eyebrow">AWARDS</p>
-          <h2>获奖与认可</h2>
-        </div>
-        <div class="award-row reveal">
-          <span>2026 美国大学生数学建模竞赛 Honorable Mention</span>
-          <span>2023 全国大学生数学竞赛省级二等奖</span>
-          <span>2026 北京交通大学“挑战杯”校级铜奖</span>
-          <span>SOI 2025 国际学术会议英文口头汇报</span>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-card reveal">
-          <p class="eyebrow">CONTACT</p>
-          <h2 class="contact-title">
-            <span>期待进入真实业务分析场景，</span>
-            <span>用数据分析和 AI 工作流推动问题落地。</span>
-          </h2>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:lxr77502@outlook.com">lxr77502@outlook.com</a>
-            <a class="button ghost" href="#projects">查看项目经历</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="./app.js"></script>
-  </body>
+  <dialog id="case-dialog" class="case-dialog" aria-labelledby="case-title"><div class="dialog-toolbar"><span>CASE STUDY</span><button class="icon-button" data-close-case type="button" aria-label="关闭案例" title="关闭案例"><i data-icon="x"></i></button></div><div id="case-content"></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-caption"><div class="image-toolbar"><p id="image-caption"></p><button class="icon-button" data-close-image type="button" aria-label="关闭图片" title="关闭图片"><i data-icon="x"></i></button></div><div class="image-scroll"><img id="expanded-image" src="./assets/images/elder-assistant.webp" alt="项目截图"></div></dialog>
+  <dialog id="resume-dialog" class="resume-dialog" aria-labelledby="resume-title"><div class="dialog-toolbar"><span>RESUME</span><button class="icon-button" data-close-resume type="button" aria-label="关闭简历窗口" title="关闭"><i data-icon="x"></i></button></div><div class="resume-content"><p class="eyebrow">AI PRODUCT · AGENT APPLICATION</p><h2 id="resume-title">获取我的简历</h2><p>请通过邮件获取我的 AI 产品方向简历。</p><a class="button button-primary" href="mailto:lxr77502@outlook.com?subject=获取李小冉的AI产品方向简历">邮件联系 <i data-icon="arrow-up-right"></i></a></div></dialog>
+</body>
 </html>
